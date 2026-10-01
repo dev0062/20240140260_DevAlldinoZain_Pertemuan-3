@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 15px;
+    
+    /* Layout Utama Mobile */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #1a252f;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #ecf0f1;
+    font-style: italic;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    background-color: #ffffff;
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2c3e50;
+    color: #ffffff;
+    border-color: #2c3e50;
+}
+
+
+#Profile {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    border-left: 4px solid #2c3e50;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#Profile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+#Profile h3 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#Profile p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+form#formdata {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    border-left: 4px solid #27ae60;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form#formdata:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+form#formdata label[for="nama"] {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+form#formdata input[type="text"] {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+form#formdata input[type="text"]:focus {
+    outline: none;
+    border-color: #27ae60;
+}
+
+fieldset#jeniskelamin {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 12px;
+    
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 0.3s ease;
+}
+
+fieldset#jeniskelamin:hover {
+    border-color: #27ae60;
+}
+
+fieldset#jeniskelamin legend {
+    padding: 0 6px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+fieldset#jeniskelamin label {
+    font-size: 0.9rem;
+    color: #444;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    justify-self: center;
+    border: 1px dashed #aaa;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+}
+
+img:hover {
+    opacity: 0.8;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        max-width: 960px;
+        margin: 20px auto;
+        padding: 20px;
+        
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    header, nav, img {
+        grid-column: span 2;
+    }
+
+    #Profile {
+        height: 100%;
+    }
+
+    form#formdata {
+        grid-template-columns: 1fr;
+        align-content: start;
+    }
+
+    fieldset#jeniskelamin {
+        grid-template-columns: repeat(4, auto);
+        justify-content: start;
+        gap: 12px;
+    }
+}
